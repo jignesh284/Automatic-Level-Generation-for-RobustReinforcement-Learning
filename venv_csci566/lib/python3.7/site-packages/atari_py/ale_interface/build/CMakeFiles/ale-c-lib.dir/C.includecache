@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/tmp/pip-req-build-rvaj85r7/build/lib.linux-x86_64-3.7/atari_py/ale_interface/src/external/TinyMT/tinymt32.c
+tinymt32.h
+/tmp/pip-req-build-rvaj85r7/build/lib.linux-x86_64-3.7/atari_py/ale_interface/src/external/TinyMT/tinymt32.h
+
+/tmp/pip-req-build-rvaj85r7/build/lib.linux-x86_64-3.7/atari_py/ale_interface/src/external/TinyMT/tinymt32.h
+stdint.h
+-
+inttypes.h
+-
+
