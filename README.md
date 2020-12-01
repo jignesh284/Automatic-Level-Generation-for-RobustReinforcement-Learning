@@ -19,10 +19,16 @@ In our implementation we use the LunarLander-v2 gym environment provided by [ope
 ## Modified Lunar Lander v2 Level
 The original game is fairly simple for an agent to learn a decent policy as the landing zone is always in the center and the ship always starts at the top rigt above the landing zone. Even though the ship is given an initial displacement to the left or right, the terrain peaks are not high enough to be obstacles for the ship. Moreover as the height of the terrain points are randomly sampled, there is not much of a distribution for a GAN to learn. Therefore we modify the terrain points such that the heights of the points are sampled from a Gaussian distribution with **mean = 9** and **standard deviation = 2**.
 
+**Fig. 3.** Modified Lunar Lander level:
+
+<div style="text-align: center;">
+    <img src="figures/modified_terrain.png" width=300>
+</div>
+
 This ensures that the "real" lunar lander levels have a specific underlying distribution that the GAN would be expected to learn and it makes the levels more difficult for an RL agent to learn a decent policy for landing in the landing zone.
 
 ## Unrolled GANs
-**Fig. 3.** GAN architecture:
+**Fig. 4.** GAN architecture:
 
 <div style="text-align: center;">
     <img src="figures/generator.png" width=315> <img src="figures/discriminator.png" width=300>
