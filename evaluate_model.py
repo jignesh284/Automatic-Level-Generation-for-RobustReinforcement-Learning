@@ -25,7 +25,7 @@ cumulated_reward_ls = []
 last_reward_ls = []
 
 for i in range(TEST_LEVEL_NUMS):
-  env.load_terrain([8.51, 8.77, 10.4, 7.39, 3.33, 3.33, 3.33, 10.6, 9.99, 9.13, 9.67])
+  env.load_terrain(test_samples[i])
   init_position = randint(1,18)
   env.set_initial_x(init_position)
   # Logs will be saved in log_dir/monitor.csv
