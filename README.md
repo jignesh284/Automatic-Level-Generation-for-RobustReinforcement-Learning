@@ -19,10 +19,16 @@ In our implementation we use the LunarLander-v2 gym environment provided by [ope
 ## Modified Lunar Lander v2 Level
 The original game is fairly simple for an agent to learn a decent policy as the landing zone is always in the center and the ship always starts at the top rigt above the landing zone. Even though the ship is given an initial displacement to the left or right, the terrain peaks are not high enough to be obstacles for the ship. Moreover as the height of the terrain points are randomly sampled, there is not much of a distribution for a GAN to learn. Therefore we modify the terrain points such that the heights of the points are sampled from a Gaussian distribution with **mean = 9** and **standard deviation = 2**.
 
+**Fig. 3.** Modified Lunar Lander level:
+
+<div style="text-align: center;">
+    <img src="figures/modified_terrain.png" width=300>
+</div>
+
 This ensures that the "real" lunar lander levels have a specific underlying distribution that the GAN would be expected to learn and it makes the levels more difficult for an RL agent to learn a decent policy for landing in the landing zone.
 
 ## Unrolled GANs
-**Fig. 3.** GAN architecture:
+**Fig. 4.** GAN architecture:
 
 <div style="text-align: center;">
     <img src="figures/generator.png" width=315> <img src="figures/discriminator.png" width=300>
@@ -46,11 +52,11 @@ We found that under several different initializations, A2C had the best maximum 
 
 We vary the number of training steps per level and how many levels were loaded, such that there were always 600,000 training steps (from previous experiments, peak values most often occurred before 300,000 timesteps and were not surpassed afterward). The mean cumulative reward for each condition and variations of training steps per level are shown below.
 
-|  | 60 level loads, 10,000 timesteps per level | 100 level loads, 6,000 timesteps per level | 300 level loads, 2,000 timesteps per level | 600 level loads, 1,000 timesteps per level | 1000 level loads, 600 timesteps per level |
+|  | 60 level loads; 10,000 timesteps per level | 100 level loads; 6,000 timesteps per level | 300 level loads; 2,000 timesteps per level | 600 level loads; 1,000 timesteps per level | 1000 level loads; 600 timesteps per level |
 |-|-|-|-|-|-|
-| 10 Original Levels (Original) | -63.9585831613715  +-  23.6296709499651 | -49.0820748383898  +-  25.2000656334681 | -29.2757488596109  +-  22.8957172909531 | -96.8522412955124  +-  13.0334122886884 | -51.6172432632894  +-  23.8856737297661 |
-| 10 Original + 40 GAN-generated (Combined) | -17.6600965450973  +-  12.3021398180898 | 9.27202873913585  +-  23.1057813492394 | 0.0836289060744647  +-  38.1860668637518 | 38.6076335975186  +-  58.0603246977128 | -30.2135256269367  +-  13.7702798852628 |
-| 10 Original + 40 "Random" Levels (Random) | -18.911273287633  +-  10.1782321600483 | -46.9979439293063  +-  41.8384183308556 | -24.02170300328  +-  22.3397621547855 | -46.0751791131674  +-  18.2597466440784 | -29.8595076694415  +-  29.2875552623666 |
+| 10 Original Levels (Original) | -63.96  +-  23.63 | -49.08  +-  25.20 | -29.27  +-  22.89 | -96.85  +-  13.03 | -51.61  +-  23.89 |
+| 10 Original + 40 GAN-generated (Combined) | -17.66  +-  12.30 | 9.27  +-  23.11 | 0.08  +-  38.19 | 38.61  +-  58.06 | -30.21  +-  13.77 |
+| 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | -29.85  +-  29.28 |
 
 
 
