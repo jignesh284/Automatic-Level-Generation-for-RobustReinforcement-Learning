@@ -80,8 +80,6 @@ We vary the number of training steps per level and how many levels were loaded, 
 | 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | -29.85  +-  29.28 |
 
 
-
-
 # Code and Resources
-- [Drive](https://drive.google.com/drive/folders/1ZU8QwG1WK8pGDoHGHVkUil-lqrs0Fz6P?usp=sharing)
-- [Game_Repo](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py)
+- [Drive with GAN code and generated data](https://drive.google.com/drive/folders/1ZU8QwG1WK8pGDoHGHVkUil-lqrs0Fz6P?usp=sharing)
+- [Game repository](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py)
