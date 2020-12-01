@@ -11,7 +11,7 @@ observation = env.reset()
 
 while True:
     env.render()
-    action = 2   
+    action = 0  
     observation, reward, done, info = env.step(action) 
 
     if done: 
