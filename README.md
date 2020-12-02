@@ -80,7 +80,7 @@ To select the RL agent, we used different techniques for randomly-generated leve
 
 We found that under several different initializations, A2C had the best maximum performance, and did not run into as many catastrophic failures over time.
 
-We vary the number of training steps per level and how many levels were loaded, such that there were always 600,000 training steps (from previous experiments, peak values most often occurred before 300,000 timesteps and were not surpassed afterward). In addition, to take randomness into account, each experiment was conducted with five different seeds to calculate the mean and standard deviation. The detailed results are shown below:
+We vary the number of training steps per level and how many levels were loaded, such that there were always 600,000 training steps (from previous experiments, peak values most often occurred before 300,000 timesteps and were not surpassed afterward). All the RL agents are also tested on the same 20 levels selected from the orignal game levels from the Lunar Lander Game. In addition, to take randomness into account, each experiment was conducted with five different seeds to calculate the mean and standard deviation of the cumulated reward . The detailed results are shown below:
 
 |  | 60 level loads; 10,000 timesteps per level | 100 level loads; 6,000 timesteps per level | 300 level loads; 2,000 timesteps per level | 600 level loads; 1,000 timesteps per level | 1000 level loads; 600 timesteps per level |
 |-|-|-|-|-|-|
@@ -99,7 +99,7 @@ As shown in the table above, in four out of five experiments, the RL agents trai
 
 # Limitations and Future Work
 
-Due to the time and computational constraint, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential experiment can be conducted in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform, and 2) how fast the RL agents learn in a more realistic scenario.
+Due to the time and computational constraints, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential improvement can be maed in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform, and 2) how fast the RL agents learn in a larger scale.
 
 Moreover, as Prof. Lim pointed out during our presentation, one potential direction is to validate our hypothesis in more complicated RL environment. Since Lunar Lander is a relatively easy environment, more GAN-generated levels may not be needed to achive state-of-the-art performance. However, in more challenging environment such as StarCraft, GAN-generated levels could potentially help RL agents gain more advantages than the baseline RL agents.
 
