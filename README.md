@@ -41,7 +41,9 @@ As the distribution of modified real samples is simple (Gaussian), we use a simp
     <img src="figures/generator.png" width=315> <img src="figures/discriminator.png" width=300>
 </div>
 
-However GANs can suffer from **mode collapse** where the generator produces the same or similar output for any noise input. We also faced the same problem when using vanilla GANs, therefore we used the following solutions: 1) Increase the size of the latent dimension, 2) Using **Unrolled GANs** (see Fig. 5.)
+However GANs can suffer from **mode collapse** where the generator produces the same or similar output for any noise input. We also faced the same problem when using vanilla GANs, therefore we used the following solutions: 
+1. Increase the size of the latent dimension, 
+2. Using **Unrolled GANs** (see Fig. 5.)
 
 
 
