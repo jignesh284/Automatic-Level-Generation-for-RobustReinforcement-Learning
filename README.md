@@ -71,6 +71,8 @@ We evaluate the generalizability of the agent by comparing across 3 conditions:
   
 We reason that in more realistic scenarios, it may be difficult to create levels by hand, so we treat original levels as a scarse resource. Sampling from a GAN that approximates the true distribution of levels, however, is inexpensive, so we can have many more levels from a GAN. To make sure that it is not simply the inclusion of more diverse levels that increases the generalizability of the RL agent, we have our third condition which samples additional levels from a distribution that is not the same as the original distribution. This is akin to just randomly filling a game level with random assets that do not necessarily fulfil the game designers' stylistic criteria (in real-life these criteria are listed in internal style guides and are important for establishing the brand of a game).
 
+# Results
+
 To select the RL agent, we used different techniques for randomly-generated levels to see which algorithm is best at learning the task of playing Lunar Lander. We compared across Vanilla Policy Gradients, Advantage Actor-Critic, and Proximal Policy Optimization. Training curves for each method are shown below:
 
 <div style="text-align: center;">
@@ -89,7 +91,10 @@ We vary the number of training steps per level and how many levels were loaded, 
 | 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | **-29.85  +-  29.28** |
 
 
-As shown in the table above, in four out of five experiments, the RL agents trained on both original and GAN-generated levels outperformed the two baseline: 1) RL agent trained on only the orignal levels (Random), and 2) RL agent trained on both original and random levels. In the experiment with 1000 levels and 600 training timesteps, the proposed RL agents performed slightly worse than the RL baseline with random levels. We show the best performing agent overall below (10 Original, 40 GAN-generated; 600 level loads, 1,000 timesteps per level).
+
+As shown in the table above, in four out of five experiments, the RL agents trained on both original and GAN-generated levels outperformed the two baseline: 1) RL agent trained on only the orignal levels (Random), and 2) RL agent trained on both original and random levels. In the experiment with 1000 levels and 600 training timesteps, the proposed RL agents performed slightly worse than the RL baseline with random levels. Therefore, in our experiments, we validated that training the agent with the GAN-generated levels will lead to an optimal policy that performs better than the policy learned from the few pre-existing or randomly generated levels.
+
+We show the best performing agent overall below (10 Original, 40 GAN-generated; 600 level loads, 1,000 timesteps per level).
 
 <div style="text-align: center;">
     <b>Fig. 8.</b> best RL model qualitative performance on testing levels:<br>
