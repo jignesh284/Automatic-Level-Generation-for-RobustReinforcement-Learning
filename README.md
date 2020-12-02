@@ -88,6 +88,10 @@ We vary the number of training steps per level and how many levels were loaded, 
 | 10 Original + 40 GAN-generated (Combined) | **-17.66  +-  12.30** | **9.27  +-  23.11** | **0.08  +-  38.19** | **38.61  +-  58.06** | -30.21  +-  13.77 |
 | 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | **-29.85  +-  29.28** |
 
+<div style="text-align: center;">
+    <b>Fig. 8.</b> best RL model qualitative performance on testing levels:<br>
+    <img src="figures/lunarlander.gif" width=600>
+</div>
 
 # Code and Resources
 - [Drive with GAN code and generated data](https://drive.google.com/drive/folders/1ZU8QwG1WK8pGDoHGHVkUil-lqrs0Fz6P?usp=sharing)

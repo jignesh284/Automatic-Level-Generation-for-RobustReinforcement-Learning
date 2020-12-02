@@ -5,7 +5,7 @@ from stable_baselines3 import A2C
 from random import randint
 from csv import reader
 
-model = A2C.load("./best_models/random_60_10000")
+model = A2C.load("./best_models/combined_600_1000")
 
 env = gym.make('LunarLander-v2')
 
