@@ -96,6 +96,11 @@ As shown in the table above, in four out of five experiments, the RL agents trai
     <img src="figures/lunarlander.gif" width=600>
 </div>
 
+
+# Limitation and Future Work
+
+Due to the time and computational constraint, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential experiment can be conducted in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform, and 2) how fast the RL agents learn in a more realistic scenario.
+
 # Code and Resources
 - [Drive with GAN code and generated data](https://drive.google.com/drive/folders/1ZU8QwG1WK8pGDoHGHVkUil-lqrs0Fz6P?usp=sharing)
 - [Game repository](https://github.com/openai/gym/blob/master/gym/envs/box2d/lunar_lander.py)
