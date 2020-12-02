@@ -79,8 +79,6 @@ We vary the number of training steps per level and how many levels were loaded, 
 | 10 Original + 40 GAN-generated (Combined) | **-17.66  +-  12.30** | **9.27  +-  23.11** | **0.08  +-  38.19** | **38.61  +-  58.06** | -30.21  +-  13.77 |
 | 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | **-29.85  +-  29.28** |
 
-
-
 As shown in the table above, in four out of five experiments, the RL agents trained on both original and GAN-generated levels outperformed the two baseline: 1) RL agent trained on only the orignal levels, and 2) RL agent trained on both original and random levels. In the experiment with 1000 levels and 600 training timesteps, the proposed RL agents performed slightly worse than the RL baseline with random levels. Therefore, in our experiments, we validated that training the agent with the GAN-generated levels will lead to an optimal policy that performs better than the policy learned from the few pre-existing or randomly generated levels.
 
 We show the best performing agent overall below (10 Original, 40 GAN-generated; 600 level loads, 1,000 timesteps per level).
