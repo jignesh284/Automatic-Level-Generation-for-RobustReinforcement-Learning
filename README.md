@@ -55,7 +55,7 @@ We reason that in more realistic scenarios, it may be difficult to create levels
 
 To select the RL agent, we used different techniques for randomly-generated levels to see which algorithm is best at learning the task of playing Lunar Lander. We compared across Vanilla Policy Gradients, Advantage Actor-Critic, and Proximal Policy Optimization. Training curves for each method are shown below:
 
-<p align="center"><b>Fig. 7.</b> Illustrative training curves from each algorithm:<p>
+<p align="center"><b>Fig. 7.</b> Illustrative training curves from each algorithm:</p>
 <p align="center"><img src="figures/vpg.png" width=200> <img src="figures/a2c.png" width=200> <img src="figures/ppo.png" width=200></p>
 
 We found that under several different initializations, A2C had the best maximum performance, and did not run into as many catastrophic failures over time.
