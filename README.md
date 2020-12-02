@@ -97,7 +97,7 @@ As shown in the table above, in four out of five experiments, the RL agents trai
 </div>
 
 
-# Limitation and Future Work
+# Limitations and Future Work
 
 Due to the time and computational constraint, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential experiment can be conducted in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform, and 2) how fast the RL agents learn in a more realistic scenario.
 
