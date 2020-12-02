@@ -104,7 +104,7 @@ We show the best performing agent overall below (10 Original, 40 GAN-generated; 
 
 # Limitations and Future Work
 
-Due to the time and computational constraints, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential improvement can be maed in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform, and 2) how fast the RL agents learn in a larger scale.
+Due to the time and computational constraints, experiments with larger-scale training and testing need to be conducted to further validate our hypothesis. For example, one potential improvement can be maed in the future is to use all the orignal levels from the lunar lander game as the baseline instead of only 10 levels. In this case, by combining these original levels with more GAN-generated levels, we can further study 1) how well the RL agents perform and generalize to new levels, and 2) how fast the RL agents can be trained in a larger scale.
 
 Moreover, as Prof. Lim pointed out during our presentation, one potential direction is to validate our hypothesis in more complicated RL environment. Since Lunar Lander is a relatively easy environment, more GAN-generated levels may not be needed to achive state-of-the-art performance. However, in more challenging environment such as StarCraft, GAN-generated levels could potentially help RL agents gain more advantages than the baseline RL agents.
 
