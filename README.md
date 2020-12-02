@@ -80,13 +80,16 @@ To select the RL agent, we used different techniques for randomly-generated leve
 
 We found that under several different initializations, A2C had the best maximum performance, and did not run into as many catastrophic failures over time.
 
-We vary the number of training steps per level and how many levels were loaded, such that there were always 600,000 training steps (from previous experiments, peak values most often occurred before 300,000 timesteps and were not surpassed afterward). The mean cumulative reward for each condition and variations of training steps per level are shown below.
+We vary the number of training steps per level and how many levels were loaded, such that there were always 600,000 training steps (from previous experiments, peak values most often occurred before 300,000 timesteps and were not surpassed afterward). In addition, to take randomness into account, each experiment was conducted with five different seeds to calculate the mean and standard deviation. The detailed results are shown below:
 
 |  | 60 level loads; 10,000 timesteps per level | 100 level loads; 6,000 timesteps per level | 300 level loads; 2,000 timesteps per level | 600 level loads; 1,000 timesteps per level | 1000 level loads; 600 timesteps per level |
 |-|-|-|-|-|-|
 | 10 Original Levels (Original) | -63.96  +-  23.63 | -49.08  +-  25.20 | -29.27  +-  22.89 | -96.85  +-  13.03 | -51.61  +-  23.89 |
 | 10 Original + 40 GAN-generated (Combined) | **-17.66  +-  12.30** | **9.27  +-  23.11** | **0.08  +-  38.19** | **38.61  +-  58.06** | -30.21  +-  13.77 |
 | 10 Original + 40 "Random" Levels (Random) | -18.91  +-  10.18 | -46.99  +-  41.83 | -24.02  +-  22.34 | -46.07  +-  18.25 | **-29.85  +-  29.28** |
+
+
+As shown in the table above, in four out of five experiments, the RL agents trained on both original and GAN-generated levels outperformed the two baseline: 1) RL agent trained on only the orignal levels (Random), and 2) RL agent trained on both original and random levels. In the experiment with 1000 levels and 600 training timesteps, the proposed RL agents performed slightly worse than the RL baseline with random levels. We show the best performing agent overall below (10 Original, 40 GAN-generated; 600 level loads, 1,000 timesteps per level).
 
 <div style="text-align: center;">
     <b>Fig. 8.</b> best RL model qualitative performance on testing levels:<br>
