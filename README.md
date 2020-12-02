@@ -6,7 +6,6 @@ In this blog, we explore using Generative Adversarial Networks (GANs) to create 
     <img style="margin: 0 auto;" src="figures/GAN%20level1.png" width=300> <img src="figures/GAN%20level1.png" width=300>
 </p>
 
-
 \[1] Torrado, R. R., Khalifa, A., Green, M. C., Justesen, N., Risi, S., & Togelius, J. (2020, August). Bootstrapping conditional gans for video game level generation. In 2020 IEEE Conference on Games (CoG) (pp. 41-48). IEEE.
 
 ## Real Lunar Lander v2 Level
@@ -15,11 +14,8 @@ In our implementation we use the LunarLander-v2 gym environment provided by [ope
 <p align="center"><b>Fig. 2.</b> Original Lunar Lander level:</p>
 <p align="center"><img src="figures/terrain.png" width=300></p>
 
-
 ## Modified Lunar Lander v2 Level
 The original game is fairly simple for an agent to learn a decent policy as the landing zone is always in the center and the ship always starts at the top rigt above the landing zone. Even though the ship is given an initial displacement to the left or right, the terrain peaks are not high enough to be obstacles for the ship. Moreover as the height of the terrain points are randomly sampled, there is not much of a distribution for a GAN to learn. Therefore we modify the terrain points such that the heights of the points are sampled from a Gaussian distribution with **mean = 9** and **standard deviation = 2**.
-
-
 
 <p align="center"><b>Fig. 3.</b>Modified Lunar Lander level:</p>
 <p align="center"><img src="figures/modified_terrain.png" width=300></p>
@@ -29,8 +25,6 @@ This ensures that the "real" lunar lander levels have a specific underlying dist
 ## Unrolled GANs
 As the distribution of modified real samples is simple (Gaussian), we use a simple GAN architecture with fully connected layers as shown in Fig. 4.
 
-
-
 <p align="center"><b>Fig. 4.</b> GAN architecture:<p>
 <p align="center"><img src="figures/generator.png" width=315> <img src="figures/discriminator.png" width=300></p>
 
@@ -38,14 +32,10 @@ However GANs can suffer from **mode collapse** where the generator produces the 
 1. Increase the size of the latent dimension, 
 2. Using **Unrolled GANs** (see Fig. 5.)
 
-
 <p align="center"><b>Fig. 5.</b> Unrolled GANs [2]:</p>
 <p align="center"><img src="figures/unrolled_GAN.png" width=600></p>
 
-
 \[2] Metz, L., Poole, B., Pfau, D., & Sohl-Dickstein, J. (2016). Unrolled generative adversarial networks. arXiv preprint arXiv:1611.02163.
-
-
 
 
 ## Generated levels:
@@ -85,7 +75,6 @@ We show the best performing agent overall below (10 Original, 40 GAN-generated; 
 
 <p align="center"><b>Fig. 8.</b> best RL model qualitative performance on testing levels:</p>
 <p align="center"><img src="figures/lunarlander.gif" width=600></p>
-
 
 # Limitations and Future Work
 
