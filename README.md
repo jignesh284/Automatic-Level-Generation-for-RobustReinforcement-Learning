@@ -25,7 +25,7 @@ This ensures that the "real" lunar lander levels have a specific underlying dist
 ## Unrolled GANs
 As the distribution of modified real samples is simple (Gaussian), we use a simple GAN architecture with fully connected layers as shown in Fig. 4.
 
-<p align="center"><b>Fig. 4.</b> GAN architecture:<p>
+<p align="center"><b>Fig. 4.</b> GAN architecture:</p>
 <p align="center"><img src="figures/generator.png" width=315> <img src="figures/discriminator.png" width=300></p>
 
 However GANs can suffer from **mode collapse** where the generator produces the same or similar output for any noise input. We also faced the same problem when using vanilla GANs, therefore we used the following solutions: 
